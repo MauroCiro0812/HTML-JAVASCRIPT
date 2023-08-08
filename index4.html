@@ -1,0 +1,141 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Maquetación de CSS"</title>
+    <link rel="stylesheet" href="style4.css" type="text/css">
+    <script>
+
+        
+
+
+        for (let i = 0; i <= 20; i++){
+            console.log("este numero es" + i);
+        }
+
+        function sumar(){
+            let campo1=document.getElementById("campo1").value;
+            let campo2=document.getElementById("campo2").value;
+            let resultado = parseInt(campo1) + parseInt(campo2);
+            console.log(resultado);
+            let cajatexto=document.getElementById("mostrarTablero1");
+            cajatexto.innerHTML=resultado;
+        }
+        function UnirNombres(nombres,apellidos){
+            let NombreUnido = nombres+" "+apellidos;
+            console.log(NombreUnido)
+           
+        }
+
+       // sumar(1,6);
+       // sumar(6,8);
+        UnirNombres("Mauricio","Ciro");
+
+        function numeroparoimpar(){
+            let campo3=document.getElementById("campo3").value;
+            let tablero2=document.getElementById("mostrarTablero2");
+
+            if(parseInt(campo3)%2==0){
+                console.log("El numero "+campo3+" es par")
+                tablero2.innerHTML=campo3
+            }else{
+                console.log("El numero "+campo3+" es impar")
+                tablero2.innerHTML=campo3
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="contenedorPadre">
+        <div id="cabezera">
+            <p style="margin-top: 0; color: black;font-weight: bold; font-size: 50px;">
+                cabezera
+            </p>
+        </div>
+
+        <div id="menu">
+            
+        </div>
+
+        <div id="izquierdaa">
+            <img src="/Imagenes/pokemon.jpg" height="220px">
+        </div>
+
+        <div id="derecha">
+            <table>
+                <thead>
+                    <th>
+                        Cedula
+                    </th>
+                    <th>
+                        nombres
+                    </th>
+                    <th>
+                        apellidos
+                    </th>
+                    <th>
+                        correo
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1234
+                        </td>
+                        <td>
+                            jorge
+                        </td>
+                        <td>
+                            leal
+                        </td>
+                        <td>
+                            jota@hotmail.com
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1234
+                        </td>
+                        <td>
+                            jorge
+                        </td>
+                        <td>
+                            leal
+                        </td>
+                        <td>
+                            jota@hotmail.com
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Haz <a href="https://www.google.com/" target="_blank"></a>Click aqui</p>
+            <!-- iframe nos permire insertar un código, es una página dentro de nuestra página -->
+            
+            <input type="text" id="campo1" name="campo1">
+            <input type="text" id="campo2" name="campo2">
+
+            <button class="boton" onclick="sumar()">Click sumar</button>
+            <br>
+            <div class="tablero1">
+                <span id="mostrarTablero1"></span>
+            </div>
+            <input type="text" id="campo3" name="campo3" class="input">
+
+            <button class="boton" onclick="numeroparoimpar()">Click par o impar</button>
+
+            <div class="tablero1">
+                <span id="mostrarTablero2"></span>
+            </div>
+        </div>
+
+        <div id="pie">
+
+        </div>
+
+    </div>
+</body>
+</html>
